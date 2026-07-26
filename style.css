@@ -115,7 +115,6 @@ z-index:9999;
 /* =====================================================
 CURSOR GLOW
 ===================================================== */
-
 .cursor-glow{
 
 position:fixed;
@@ -135,12 +134,17 @@ pointer-events:none;
 transform:translate(-50%,-50%);
 
 z-index:0;
-   .hero,
+
+}
+
+
+.hero,
 section,
 footer{
-    position:relative;
-    z-index:1;
-}
+
+position:relative;
+
+z-index:1;
 
 }
 
