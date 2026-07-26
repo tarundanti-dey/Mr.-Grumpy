@@ -1,0 +1,930 @@
+/* =====================================================
+   GOOGLE FONTS
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+/* =====================================================
+   ROOT
+===================================================== */
+
+:root{
+
+--bg:#F5F1EB;
+--card:#FCFAF7;
+--text:#2F3133;
+--grey:#777777;
+--accent:#7A3E3E;
+--accent-dark:#5B2D2D;
+--border:#DDD5CC;
+
+}
+
+
+/* =====================================================
+RESET
+===================================================== */
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:"Inter",sans-serif;
+
+background:radial-gradient(circle at top,#FAF8F5,#F5F1EB);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+line-height:1.9;
+
+}
+
+
+/* =====================================================
+NOISE
+===================================================== */
+
+.noise{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+opacity:.03;
+
+background-image:url("https://grainy-gradients.vercel.app/noise.svg");
+
+z-index:999;
+
+}
+
+
+/* =====================================================
+PROGRESS BAR
+===================================================== */
+
+.progress{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:3px;
+
+width:0%;
+
+background:var(--accent);
+
+z-index:9999;
+
+}
+
+
+/* =====================================================
+CURSOR GLOW
+===================================================== */
+
+.cursor-glow{
+
+position:fixed;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+background:radial-gradient(circle,
+rgba(122,62,62,.09),
+transparent 70%);
+
+pointer-events:none;
+
+transform:translate(-50%,-50%);
+
+z-index:-1;
+
+}
+
+
+/* =====================================================
+HERO
+===================================================== */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:60px;
+
+text-align:center;
+
+}
+
+.hero-content{
+
+max-width:760px;
+
+}
+
+.issue{
+
+letter-spacing:6px;
+
+text-transform:uppercase;
+
+font-size:.8rem;
+
+color:var(--grey);
+
+margin-bottom:35px;
+
+}
+
+.hero h1{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:8rem;
+
+font-weight:500;
+
+line-height:1;
+
+margin-bottom:30px;
+
+}
+
+.subtitle{
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+font-size:.9rem;
+
+color:var(--accent);
+
+margin-bottom:50px;
+
+}
+
+.hero-divider{
+
+width:90px;
+
+height:1px;
+
+background:var(--accent);
+
+margin:auto;
+
+margin-bottom:60px;
+
+}
+
+.intro{
+
+max-width:500px;
+
+margin:auto;
+
+font-size:1.1rem;
+
+color:var(--grey);
+
+line-height:2.2;
+
+}
+
+.begin{
+
+display:inline-block;
+
+margin-top:80px;
+
+text-decoration:none;
+
+color:var(--accent);
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+font-size:.85rem;
+
+transition:.35s;
+
+}
+
+.begin:hover{
+
+transform:translateY(5px);
+
+}
+
+
+/* =====================================================
+GENERAL
+===================================================== */
+
+section{
+
+padding:140px 12%;
+
+}
+
+.chapter{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.chapter-heading{
+
+margin-bottom:80px;
+
+}
+
+.chapter-heading span{
+
+letter-spacing:5px;
+
+font-size:.8rem;
+
+text-transform:uppercase;
+
+color:var(--accent);
+
+}
+
+.chapter-heading h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:4rem;
+
+font-weight:500;
+
+margin-top:15px;
+
+}
+
+.chapter-content{
+
+max-width:650px;
+
+}
+
+.chapter-content p{
+
+margin-bottom:28px;
+
+font-size:1.08rem;
+
+color:var(--grey);
+
+}
+
+
+/* =====================================================
+DIVIDER
+===================================================== */
+
+.divider{
+
+width:80px;
+
+height:1px;
+
+background:var(--accent);
+
+margin:50px 0;
+
+}
+
+
+/* =====================================================
+LINKS
+===================================================== */
+
+a{
+
+color:inherit;
+
+}
+
+
+/* =====================================================
+ANIMATION CLASSES
+===================================================== */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(70px);
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+transition:1.2s ease;
+
+}
+
+
+/* =====================================================
+SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ECE7E1;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--accent);
+
+border-radius:20px;
+
+}
+
+
+/* =====================================================
+SELECTION
+===================================================== */
+
+::selection{
+
+background:var(--accent);
+
+color:white;
+
+}
+
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:5rem;
+
+}
+
+.chapter-heading h2{
+
+font-size:3rem;
+
+}
+
+section{
+
+padding:100px 8%;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero h1{
+
+font-size:3.7rem;
+
+}
+
+.chapter-heading h2{
+
+font-size:2.3rem;
+
+}
+
+.intro{
+
+font-size:1rem;
+
+}
+
+.hero{
+
+padding:25px;
+
+}
+
+}
+/* =====================================================
+TIMELINE
+===================================================== */
+
+.timeline{
+
+position:relative;
+
+max-width:900px;
+
+margin:60px auto;
+
+padding-left:70px;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:22px;
+
+top:0;
+
+bottom:0;
+
+width:2px;
+
+background:var(--border);
+
+}
+
+.event{
+
+position:relative;
+
+background:var(--card);
+
+padding:35px;
+
+margin-bottom:35px;
+
+border-radius:18px;
+
+border:1px solid var(--border);
+
+transition:.4s ease;
+
+box-shadow:0 15px 35px rgba(0,0,0,.04);
+
+}
+
+.event::before{
+
+content:"";
+
+position:absolute;
+
+left:-58px;
+
+top:38px;
+
+width:16px;
+
+height:16px;
+
+border-radius:50%;
+
+background:var(--accent);
+
+border:4px solid var(--bg);
+
+}
+
+.event:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--accent);
+
+box-shadow:0 25px 50px rgba(0,0,0,.08);
+
+}
+
+.event h3{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:2rem;
+
+margin-bottom:10px;
+
+font-weight:500;
+
+}
+
+.event p{
+
+color:var(--grey);
+
+line-height:1.9;
+
+}
+
+
+/* =====================================================
+PROFILE CARD
+===================================================== */
+
+.profile{
+
+max-width:750px;
+
+margin:auto;
+
+background:rgba(252,250,247,.75);
+
+backdrop-filter:blur(14px);
+
+border:1px solid var(--border);
+
+border-radius:22px;
+
+padding:45px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.05);
+
+transition:.4s;
+
+}
+
+.profile:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 35px 70px rgba(0,0,0,.08);
+
+}
+
+.row{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 0;
+
+border-bottom:1px solid var(--border);
+
+}
+
+.row:last-child{
+
+border:none;
+
+}
+
+.row span{
+
+color:var(--grey);
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+font-size:.85rem;
+
+}
+
+.row strong{
+
+font-weight:500;
+
+font-size:1.05rem;
+
+color:var(--text);
+
+}
+
+
+/* =====================================================
+QUOTE SECTION
+===================================================== */
+
+.quote-section{
+
+text-align:center;
+
+padding:180px 10%;
+
+}
+
+.small-title{
+
+letter-spacing:6px;
+
+text-transform:uppercase;
+
+font-size:.8rem;
+
+color:var(--accent);
+
+margin-bottom:30px;
+
+}
+
+.quote-section h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:7rem;
+
+font-weight:500;
+
+margin-bottom:40px;
+
+color:var(--accent);
+
+}
+
+.quote-section p{
+
+max-width:650px;
+
+margin:auto;
+
+font-size:1.15rem;
+
+line-height:2.3;
+
+color:var(--grey);
+
+}
+
+.quote-section h3{
+
+margin-top:50px;
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:3.5rem;
+
+font-weight:500;
+
+color:var(--accent);
+
+}
+
+
+/* =====================================================
+LETTER
+===================================================== */
+
+.letter{
+
+max-width:720px;
+
+}
+
+.letter p{
+
+font-size:1.08rem;
+
+margin-bottom:28px;
+
+line-height:2.2;
+
+color:var(--grey);
+
+}
+
+.signature{
+
+margin-top:70px;
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:2.2rem;
+
+color:var(--accent);
+
+}
+
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer{
+
+padding:150px 20px;
+
+text-align:center;
+
+border-top:1px solid var(--border);
+
+margin-top:100px;
+
+}
+
+footer h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:4rem;
+
+font-weight:500;
+
+margin-bottom:20px;
+
+}
+
+footer p{
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+font-size:.8rem;
+
+color:var(--grey);
+
+}
+
+
+/* =====================================================
+HOVER EFFECTS
+===================================================== */
+
+.chapter{
+
+transition:opacity .8s ease, transform .8s ease;
+
+}
+
+.event,
+.profile,
+.begin{
+
+transition:all .35s ease;
+
+}
+
+.hero h1{
+
+transition:.5s;
+
+}
+
+.hero h1:hover{
+
+letter-spacing:2px;
+
+color:var(--accent);
+
+}
+
+.begin:hover{
+
+letter-spacing:6px;
+
+}
+
+.event:hover h3{
+
+color:var(--accent);
+
+}
+
+.row:hover{
+
+padding-left:10px;
+
+}
+
+.signature:hover{
+
+letter-spacing:2px;
+
+}
+
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+.timeline{
+
+padding-left:45px;
+
+}
+
+.timeline::before{
+
+left:14px;
+
+}
+
+.event::before{
+
+left:-42px;
+
+}
+
+.quote-section h2{
+
+font-size:5rem;
+
+}
+
+footer h2{
+
+font-size:3rem;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.row{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:10px;
+
+}
+
+.quote-section{
+
+padding:120px 8%;
+
+}
+
+.quote-section h2{
+
+font-size:3.5rem;
+
+}
+
+.quote-section h3{
+
+font-size:2.4rem;
+
+}
+
+.event{
+
+padding:25px;
+
+}
+
+.profile{
+
+padding:30px;
+
+}
+
+footer{
+
+padding:100px 20px;
+
+}
+
+}
