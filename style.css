@@ -9,11 +9,23 @@
 ===================================================== */
 
 :root {
+
     --text: #3A312C;
+
+    --accent: #7A3E32;
+
     --maroon: #7A3E32;
+
     --beige: #FAF8F5;
+
     --grey: #6B6763;
+
+    --bg: #FAF8F5;
+
+    --border: rgba(122,62,50,0.15);
+
     --card: rgba(255,255,255,0.55);
+
 }
 /* =====================================================
 RESET
@@ -171,7 +183,7 @@ margin-bottom:35px;
 
 font-family:"Cormorant Garamond",serif;
 
-font-size:8rem;
+font-size:clamp(4rem,8vw,7rem);
 
 font-weight:500;
 
@@ -254,7 +266,34 @@ transform:translateY(5px);
 GENERAL
 ===================================================== */
 
-section{
+.card{
+
+background:var(--card);
+
+backdrop-filter:blur(14px);
+
+border:1px solid var(--border);
+
+border-radius:24px;
+
+padding:40px;
+
+box-shadow:
+0 20px 50px rgba(60,40,30,.08);
+
+transition:.4s ease;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 30px 70px rgba(60,40,30,.15);
+
+}section{
 
 padding:140px 12%;
 
@@ -928,5 +967,31 @@ footer{
 padding:100px 20px;
 
 }
+
+}
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+.hero-content{
+
+animation:fadeUp 1.4s ease forwards;
 
 }
