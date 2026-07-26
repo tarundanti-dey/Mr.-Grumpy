@@ -152,7 +152,21 @@ z-index:1;
 /* =====================================================
 HERO
 ===================================================== */
-.begin{
+.hero{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:60px;
+
+text-align:center;
+
+}.begin{
 
 display:inline-flex;
 
@@ -868,12 +882,6 @@ transition:.5s;
 letter-spacing:2px;
 
 color:var(--accent);
-
-}
-
-.begin:hover{
-
-letter-spacing:6px;
 
 }
 
