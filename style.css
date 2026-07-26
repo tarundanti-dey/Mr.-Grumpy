@@ -995,3 +995,41 @@ transform:translateY(0);
 animation:fadeUp 1.4s ease forwards;
 
 }
+/* =====================================================
+HERO GLOW
+===================================================== */
+
+.hero {
+    position: relative;
+    overflow:hidden;
+}
+
+
+.hero::before {
+
+content:"";
+
+position:absolute;
+
+width:600px;
+
+height:600px;
+
+background:
+radial-gradient(
+circle,
+rgba(122,62,50,0.14),
+transparent 70%
+);
+
+top:5%;
+
+left:50%;
+
+transform:translateX(-50%);
+
+filter:blur(30px);
+
+z-index:-1;
+
+}
